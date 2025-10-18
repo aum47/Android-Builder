@@ -1,0 +1,33 @@
+[
+  {
+    "kernelSource": {
+      "name": "G611F-Kernel",
+      "repo": "https://github.com/aum47/android_kernel_samsung_g611f",
+      "branch": "main",
+      "device": "on7xreflte",
+      "defconfig": "on7xreflte_01_defconfig"
+    },
+    "toolchains": [
+      {
+        "name": "aarch64-ubertc",
+        "repo": "https://bitbucket.org/UBERTC/aarch64-linux-android-4.9-kernel.git",
+        "branch": "master",
+        "binaryEnv": ["bin"]
+      }
+    ],
+    "enableCcache": true,
+    "params": {
+      "ARCH": "arm64",
+      "CC": "",
+      "externalCommands": {
+        "CROSS_COMPILE": "aarch64-linux-android-"
+      }
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true
+    },
+    "enableKernelSU": false,
+    "enableLXC": false
+  }
+]
